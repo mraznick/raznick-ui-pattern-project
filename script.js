@@ -1,15 +1,3 @@
-//ISSUE: can't figure out how to move createList(); to global scale...
-//...so I can use the response (AKA the array of images) in my event listener
-// - keep in mind, CSS will need to be adjusted to match the data attribute for the active image (and the inactive image?)
-
-//IDEAL OUTCOME: Set the Promise in get request or whatever to assign data-active to only the first image...
-//...and the rest are inactive so the site loads with only one image in the carousel...
-//...When the button is clicked, it removes the data-active attribute from the current image...
-//...and places it on the next image.
-
-//QUESTION: Should I be creating two separate event listeners for each button...
-//...so that they add/delete the data active to/from the image in their respective direction?
-
 let url = 'https://ghibliapi.herokuapp.com/films'
 
 fetch(url)
@@ -61,35 +49,3 @@ buttons.forEach(button => {
   })
 
 })
-
-
-
-// const buttons = document.querySelectorAll('.button')
-// buttons.forEach(button => {
-
-//   button.addEventListener('click', () => {
-
-//     function setActive() {
-
-//       for (let i = 0; i < resImages.length; i++) {
-//         if (resImages[i].dataset.active === 'no') {
-//           resImages[i].dataset.active === 'yes';
-
-//         }
-
-//       }
-
-//     }
-
-//     setActive();
-
-//   })
-
-// })
-
-
-
-
-//START WDS CAROUSEL BUTTON CODE - NEW BUTTON CODE ON LINE 45
-
-//END WDS CAROUSEL BUTTON CODE
