@@ -7,10 +7,14 @@
   padding: 5px;
 }
 
-body {
-  width: 600px;
-  height: 670px;
-  margin: 0
+
+#parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 .gallery-container {
@@ -21,6 +25,9 @@ body {
   width: 484px;
   height: 670px;
   position: relative;
+  justify-content: center;
+  justify-items: center;
+  /* transform: translateX(18rem) translateY(7rem); */
 }
 
 .ghibli-list {
@@ -32,10 +39,10 @@ body {
 .film-cover {
   position: absolute;
   inset: 0;
-  /* display: none; */
   opacity: 0;
   transition: 200ms opacity ease-in-out;
   transition-delay: 200ms;
+  box-shadow: 0.25em 0.25em .75em rgba(0, 0, 0, .75);
 }
 
 .film-cover>img {
@@ -91,12 +98,3 @@ body {
   transform: translateY(-30%)
 }
 
-#parent {
-  display: block;
-  margin-left: 480px;
-  margin-top: -57px;
-  height: 500px;
-  width: 100px;
-  position: center;
-  transform: translateX(-60%)
-}
